@@ -1,0 +1,26 @@
+.detail-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.movie-detail {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.detail-poster {
+  max-width: 300px; /* Limit the size of the poster */
+  width: 100%;
+  border-radius: 10px;
+}
+
+.detail-info {
+  flex: 1;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+}

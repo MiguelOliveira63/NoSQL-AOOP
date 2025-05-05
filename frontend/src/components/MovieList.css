@@ -1,0 +1,40 @@
+.container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  text-decoration: none;
+  color: black;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  background: #f9f9f9;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+}
+
+.movie-title {
+  text-align: center;
+  padding: 10px;
+}
