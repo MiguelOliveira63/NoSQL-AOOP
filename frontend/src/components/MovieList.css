@@ -1,12 +1,23 @@
+/* MovieList.css with ChatGPT-like background */
+/* Set page background to match ChatGPT's dark background */
+body {
+  background-color: #2a2c37;
+  color: #e2e2e2;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
 .container {
   padding: 20px;
   max-width: 1000px;
   margin: auto;
+  border-radius: 12px;
 }
 
 .title {
   text-align: center;
   margin-bottom: 30px;
+  color: #f0f0f0;
 }
 
 .movie-grid {
@@ -17,24 +28,68 @@
 
 .movie-card {
   text-decoration: none;
-  color: black;
-  border: 1px solid #ddd;
+  color: #e2e2e2;
+  border: 1px solid #555;
   border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.2s ease;
-  background: #f9f9f9;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  background: #5e5e6b;
 }
 
 .movie-card:hover {
   transform: scale(1.05);
+  background: #6e6e7f;
 }
 
 .movie-poster {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .movie-title {
   text-align: center;
   padding: 10px;
+  color: #fafafa;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-bar,
+.year-selector, 
+.genre-selector, 
+.sort-selector {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #555;
+  border-radius: 8px;
+  background: #5e5e6b;
+  color: #e2e2e2;
+}
+
+.search-bar::placeholder {
+  color: #bbb;
+}
+
+.year-selector, .genre-selector, .sort-selector {
+  margin-left: 10px;
+}
+
+/* Scrollbar styling for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #343541;
+}
+::-webkit-scrollbar-thumb {
+  background: #5e5e6b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6e6e7f;
 }
