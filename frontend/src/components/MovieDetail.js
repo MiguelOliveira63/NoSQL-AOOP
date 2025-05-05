@@ -28,7 +28,7 @@ const MovieDetail = () => {
 
   const { title, year, poster, genres, imdb, plot, fullplot, runtime, num_mflix_comments, languages, released, directors, writers, awards, lastupdated, countries, type, tomatoes
   } = movie;
-  
+
   return (
     <div className="detail-container">
       <Link to="/" className="back-link">← Voltar</Link>
