@@ -1,8 +1,6 @@
-/* MovieForm.css - Dark theme form styling */
-.body, html {
+body {
   background-color: #343541;
   color: #e2e2e2;
-  height: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
