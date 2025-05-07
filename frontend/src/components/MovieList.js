@@ -12,16 +12,9 @@ const MovieList = () => {
 
   useEffect(() => {
     api.get('/movies', {
-      params: {
-        searchTerm,       // estado de busca por título
-        year: selectedYear,
-        genre: selectedGenre,
-        sortOrder         // 'asc' ou 'desc'
-      }
+      params: { searchTerm, year: selectedYear, genre: selectedGenre, sortOrder }
     })
-    .then(response => {
-      setMovies(response.data);
-    })
+    .then(response => setMovies(response.data))
     .catch(err => console.error(err));
   }, [searchTerm, selectedYear, selectedGenre, sortOrder]);
 
@@ -43,9 +36,15 @@ const MovieList = () => {
   const years = [...new Set(movies.map(m => m.year))].sort((a, b) => b - a);
   const genres = [...new Set(movies.flatMap(m => m.genres || []))];
 
+
   return (
     <div className="container">
       <h1 className="title">Lista de Filmes</h1>
+
+      <div className="list-header">
+        <h1 className="title">Lista de Filmes</h1>
+        <Link to="/movies/new" className="add-button">+ Adicionar Filme</Link>
+      </div>
 
       <div className="filters">
         <input

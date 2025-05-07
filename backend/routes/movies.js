@@ -34,6 +34,19 @@ router.get('/api/movies/:id', async (req, res) => {
   }
 });
 
+// POST /api/movies - criar novo filme
+router.post('/api/movies', async (req, res) => {
+  try {
+    const data = req.body;
+    const movie = new Movie(data);
+    await movie.save();
+    res.status(201).json(movie);
+  } catch (err) {
+    console.error('Erro ao criar filme:', err);
+    res.status(400).json({ error: err.message });
+  }
+});
+
 // PUT /api/movies/:id — atualizar um filme
 router.put('/api/movies/:id', async (req, res) => {
   try {
