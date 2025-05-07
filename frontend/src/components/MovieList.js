@@ -42,7 +42,6 @@ const MovieList = () => {
       <h1 className="title">Lista de Filmes</h1>
 
       <div className="list-header">
-        <h1 className="title">Lista de Filmes</h1>
         <Link to="/movies/new" className="add-button">+ Adicionar Filme</Link>
       </div>
 
